@@ -1,9 +1,9 @@
 package com.github.joponie.flyer.portal.domain.impl;
 
+import com.github.joponie.flyer.common.base.BaseServiceImpl;
 import com.github.joponie.flyer.portal.dal.dao.UserMapper;
 import com.github.joponie.flyer.portal.dal.model.User;
 import com.github.joponie.flyer.portal.domain.IUserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -11,13 +11,5 @@ import org.springframework.stereotype.Service;
  * @since 2019-11-04
  */
 @Service
-public class UserServiceImpl implements IUserService {
-
-    @Autowired
-    private UserMapper mapper;
-
-    @Override
-    public Integer add(User user) {
-        return mapper.insert(user);
-    }
+public class UserServiceImpl extends BaseServiceImpl<UserMapper, User> implements IUserService {
 }

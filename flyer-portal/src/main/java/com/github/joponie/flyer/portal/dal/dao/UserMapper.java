@@ -8,7 +8,7 @@
 
 package com.github.joponie.flyer.portal.dal.dao;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.github.joponie.flyer.common.base.BaseMapper;
 import com.github.joponie.flyer.portal.dal.model.User;
 import org.apache.ibatis.annotations.Mapper;
 
