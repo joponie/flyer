@@ -2,7 +2,6 @@ package com.github.joponie.flyer.common.base;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -16,18 +15,7 @@ public abstract class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseMod
 
     @Override
     public void logicDel(Integer id) {
-        T record = findById(id);
-        if (record == null) {
-            return;
-        }
-        if (record instanceof UpdatableModel) {
-            Date now = new Date();
-            UpdatableModel updatableModel = (UpdatableModel) record;
-            updatableModel.setCreateTime(now);
-            updatableModel.setUpdateTime(now);
-            updatableModel.setDelFlg(1);
-            update(record);
-        }
+        throw new UnsupportedOperationException("unsupported operation for logicDel");
     }
 
     @Override
@@ -42,7 +30,8 @@ public abstract class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseMod
 
     @Override
     public Integer add(T record) {
-        return mapper.insert(record);
+        mapper.insert(record);
+        return record.getId();
     }
 
     @Override
