@@ -11,5 +11,11 @@
 
     <artifactId>flyer-portal</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.github.joponie</groupId>
+            <artifactId>flyer-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>
