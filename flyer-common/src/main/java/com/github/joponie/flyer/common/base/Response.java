@@ -1,5 +1,7 @@
 package com.github.joponie.flyer.common.base;
 
+import com.github.joponie.flyer.common.exception.FlyerException;
+import com.github.joponie.flyer.common.exception.IExceptionEnums;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -13,23 +15,23 @@ import java.io.Serializable;
 @Data
 public class Response<T> implements Serializable {
 
-    private static final int SUCCESS = 200;
-    private static final int FAIL = 500;
     private static final long serialVersionUID = 1L;
+    private static final String SUCCESS = "200";
+    private static final String FAIL = "500";
 
-    private String msg = "success";
-    private int code = SUCCESS;
+    private String message = "success";
+    private String code = SUCCESS;
     private T data;
 
-    public Response(T data, String msg) {
+    public Response(T data, String message) {
         super();
         this.data = data;
-        this.msg = msg;
+        this.message = message;
     }
 
     public Response(Throwable e) {
         super();
-        this.msg = e.getMessage();
+        this.message = e.getMessage();
         this.code = FAIL;
     }
 
@@ -54,5 +56,21 @@ public class Response<T> implements Serializable {
         r.setCode(Response.SUCCESS);
         r.setData(t);
         return r;
+    }
+
+    public static Response<Boolean> ofEx(FlyerException e) {
+        return ofEx(e.getCode(), e.getMessage());
+    }
+
+    public static Response<Boolean> ofEx(IExceptionEnums e) {
+        return ofEx(e.getCode(), e.getMessage());
+    }
+
+    public static Response<Boolean> ofEx(String code, String message) {
+        Response<Boolean> response = new Response<>();
+        response.setData(Boolean.FALSE);
+        response.setCode(code);
+        response.setMessage(message);
+        return response;
     }
 }
