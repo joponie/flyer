@@ -1,5 +1,7 @@
 package com.github.joponie.flyer.portal.controller;
 
+import com.github.joponie.flyer.common.base.BaseController;
+import com.github.joponie.flyer.common.base.Response;
 import com.github.joponie.flyer.portal.dal.model.User;
 import com.github.joponie.flyer.portal.domain.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,14 +16,15 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/user")
-public class UserController {
+public class UserController extends BaseController {
 
     @Autowired
     private IUserService userService;
 
     @PostMapping
-    public Integer add(@RequestBody User user) {
-        return userService.add(user);
+    public Response add(@RequestBody User user) {
+        log.info("add");
+        return Response.of(userService.addUser(user));
     }
 
 }

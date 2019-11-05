@@ -12,4 +12,9 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserServiceImpl extends UpdatableServiceImpl<UserMapper, User> implements IUserService {
+    @Override
+    public Integer addUser(User user) {
+        log.info("add user");
+        return add(user);
+    }
 }

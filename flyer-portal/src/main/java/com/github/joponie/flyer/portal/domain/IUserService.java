@@ -7,4 +7,6 @@ import com.github.joponie.flyer.portal.dal.model.User; /**
  */
 public interface IUserService extends IBaseService<User> {
 
+    Integer addUser(User user);
+
 }
