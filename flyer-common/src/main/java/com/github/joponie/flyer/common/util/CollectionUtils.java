@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
  * @author 刘杰鹏
  * @since 2019-11-04
  */
-public class CollectionUtils {
+public abstract class CollectionUtils {
 
     public static <E> void forEach(Collection<E> collection, Consumer<? super E> action) {
         if (isEmpty(collection) || action == null) {
