@@ -5,10 +5,7 @@ import com.github.joponie.flyer.common.base.Response;
 import com.github.joponie.flyer.portal.dal.model.User;
 import com.github.joponie.flyer.portal.domain.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author 刘杰鹏
@@ -27,4 +24,9 @@ public class UserController extends BaseController {
         return Response.of(userService.addUser(user));
     }
 
+    @GetMapping("/{id}")
+    public Response get(@PathVariable("id") Integer id) {
+        log.info("get user, userId:{}", id);
+        return Response.of(id);
+    }
 }

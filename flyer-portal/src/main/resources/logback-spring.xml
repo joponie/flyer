@@ -6,7 +6,7 @@
     <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
         <Target>System.out</Target>
         <encoder>
-            <pattern>[%d] [%thread] [%p] [%F:%L] - %m%n</pattern>
+            <pattern>[%d] [%p] [%t] [%F:%L] - %m%n</pattern>
         </encoder>
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>DEBUG</level>
@@ -14,29 +14,31 @@
     </appender>
 
     <appender name="LogFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${logPath}/flyer-portal-api.log</File>
+        <File>${logPath}/flyer-portal.log</File>
         <Append>true</Append>
         <encoder>
-            <pattern>[%d] [%thread] [%p] [%F:%L] - %m%n</pattern>
+            <pattern>[%d] [%p] [%t] [%F:%L] - %m%n</pattern>
         </encoder>
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>DEBUG</level>
         </filter>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${logPath}/flyer-portal-api.log.%d{yyyy-MM-dd}</fileNamePattern>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${logPath}/flyer-portal.log.%d{yyyy-MM-dd}.%i</fileNamePattern>
+            <!-- 单个日志文件最大500MB -->
+            <maxFileSize>500MB</maxFileSize>
         </rollingPolicy>
     </appender>
 
     <appender name="ErrorFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${logPath}/flyer-portal-api-error.log</File>
+        <File>${logPath}/flyer-portal-error.log</File>
         <encoder>
-            <pattern>[%d] [%thread] [%p] [%F:%L] - %m%n</pattern>
+            <pattern>[%d] [%p] [%t] [%F:%L] - %m%n</pattern>
         </encoder>
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>ERROR</level>
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${logPath}/flyer-portal-api-error.log.%d{yyyy-MM-dd}</fileNamePattern>
+            <fileNamePattern>${logPath}/flyer-portal-error.log.%d{yyyy-MM-dd}</fileNamePattern>
         </rollingPolicy>
     </appender>
 
