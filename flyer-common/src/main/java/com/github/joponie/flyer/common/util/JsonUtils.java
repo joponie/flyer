@@ -48,7 +48,6 @@ public abstract class JsonUtils {
         return pojo;
     }
 
-
     public static <T> List<T> fromListJson(String json, Class<T> type) {
         List<T> pojo = Lists.newArrayList();
         try {

@@ -10,6 +10,7 @@
     <modules>
         <module>flyer-common</module>
         <module>flyer-portal</module>
+        <module>flyer-rocketmq</module>
     </modules>
     <packaging>pom</packaging>
 

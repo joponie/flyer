@@ -1,0 +1,63 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "name": "rocketmq",
+      "type": "com.github.joponie.flyer.rocketmq.RocketmqProperties",
+      "sourceType": "com.github.joponie.flyer.rocketmq.RocketmqProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "rocketmq.enabled",
+      "type": "java.lang.Boolean",
+      "defaultValue": true,
+      "sourceType": "com.github.joponie.flyer.rocketmq.RocketmqProperties",
+      "description": "启用禁用."
+    },
+    {
+      "sourceType": "com.github.joponie.flyer.rocketmq.RocketmqProperties",
+      "name": "rocketmq.producer-group",
+      "description": "生产者组别.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.github.joponie.flyer.rocketmq.RocketmqProperties",
+      "name": "rocketmq.redis-repeat-key",
+      "description": "redis去重的key,如果使用redis去重,则需要设置这个值.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.github.joponie.flyer.rocketmq.RocketmqProperties",
+      "name": "rocketmq.profiles",
+      "description": "rocketmq指定环境.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.github.joponie.flyer.rocketmq.RocketmqProperties",
+      "name": "rocketmq.auto-create-topic",
+      "defaultValue": true,
+      "description": "是否自动创建topic.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.github.joponie.flyer.rocketmq.RocketmqProperties",
+      "name": "rocketmq.namesrv-addr",
+      "description": "namesrv的地址多个地址使用;分隔.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.github.joponie.flyer.rocketmq.RocketmqProperties",
+      "name": "rocketmq.consume-enabled",
+      "defaultValue": true,
+      "description": "是否允许消费.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.github.joponie.flyer.rocketmq.RocketmqProperties",
+      "name": "rocketmq.consume-topic",
+      "description": "namesrv的地址多个地址使用;分隔.",
+      "type": "java.util.List"
+    }
+  ]
+}

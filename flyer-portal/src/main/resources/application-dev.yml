@@ -30,3 +30,9 @@ spring:
         wall:
           config:
             multi-statement-allow: true
+
+rocketmq:
+  enabled: true
+  producer-group: flyer
+  profiles: dev
+  namesrv-addr: 192.168.235.22:9876
