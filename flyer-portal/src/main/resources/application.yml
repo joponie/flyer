@@ -55,4 +55,10 @@ mybatis-plus:
     call-setters-on-nulls: true
     jdbc-type-for-null: 'null'
 
+logging:
+  path: ./logs
+  level:
+    root: info
+  config: classpath:logback-spring.xml
+
 
