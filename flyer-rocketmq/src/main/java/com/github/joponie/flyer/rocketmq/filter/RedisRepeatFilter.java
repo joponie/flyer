@@ -33,6 +33,9 @@ public class RedisRepeatFilter implements RepeatFilter {
 
     @Override
     public void resetRepeat(String group, String uuid) {
+        if (stringRedisTemplate == null) {
+            return;
+        }
         String key = String.format(rocketmqProperties.getRedisRepeatKey(), group, uuid);
         stringRedisTemplate.delete(key);
     }
