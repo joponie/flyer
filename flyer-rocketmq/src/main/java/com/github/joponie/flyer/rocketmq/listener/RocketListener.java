@@ -40,7 +40,7 @@ public @interface RocketListener {
      *
      * @return the boolean
      */
-    boolean repeatFilter() default false;
+    boolean repeatFilter() default true;
 
     /**
      * 消费超时时间
