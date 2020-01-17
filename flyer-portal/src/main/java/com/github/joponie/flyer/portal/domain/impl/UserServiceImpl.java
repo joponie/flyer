@@ -6,6 +6,8 @@ import com.github.joponie.flyer.portal.dal.model.User;
 import com.github.joponie.flyer.portal.domain.IUserService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author 刘杰鹏
  * @since 2019-11-04
@@ -16,5 +18,25 @@ public class UserServiceImpl extends UpdatableServiceImpl<UserMapper, User> impl
     public Integer addUser(User user) {
         log.info("add user");
         return add(user);
+    }
+
+    @Override
+    public User getDef() {
+        return mapper.getDefaultUser();
+    }
+
+    @Override
+    public List<User> getDefList() {
+        return mapper.getDefaultListUser();
+    }
+
+    @Override
+    public Integer updateMobile(String mobile) {
+        return mapper.updateMobile(mobile);
+    }
+
+    @Override
+    public Integer deleteDeUser() {
+        return mapper.deleteDeUser();
     }
 }

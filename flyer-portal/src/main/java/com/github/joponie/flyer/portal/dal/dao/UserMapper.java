@@ -11,6 +11,10 @@ package com.github.joponie.flyer.portal.dal.dao;
 import com.github.joponie.flyer.common.base.BaseMapper;
 import com.github.joponie.flyer.portal.dal.model.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.w3c.dom.stylesheets.LinkStyle;
+
+import java.util.List;
 
 /**
  * @author 刘杰鹏
@@ -18,5 +22,13 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface UserMapper extends BaseMapper<User> {
+
+    User getDefaultUser();
+
+    List<User> getDefaultListUser();
+
+    Integer updateMobile(@Param("mobile") String mobile);
+
+    Integer deleteDeUser();
 
 }

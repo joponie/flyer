@@ -35,4 +35,24 @@ public class UserController extends BaseController {
         log.info("get user, userId:{}", id);
         return Response.of(id);
     }
+
+    @GetMapping("/def")
+    public Response getDef() {
+        return Response.of(userService.getDef());
+    }
+
+    @GetMapping("/deflist")
+    public Response deflist() {
+        return Response.of(userService.getDefList());
+    }
+
+    @GetMapping("/delete")
+    public Response delete() {
+        return Response.of(userService.deleteDeUser());
+    }
+
+    @GetMapping("/update")
+    public Response update() {
+        return Response.of(userService.updateMobile("123123"));
+    }
 }

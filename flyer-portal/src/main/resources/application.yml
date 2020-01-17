@@ -4,7 +4,7 @@ server:
     uri-encoding: UTF-8
     max-threads: 1000
     min-spare-threads: 30
-  port: 8080
+  port: 8086
   servlet:
     context-path: /flyer-portal
 
@@ -33,6 +33,7 @@ spring:
 
 #mybatis
 mybatis-plus:
+  configuration-properties: pu:'mingbai123'
   mapper-locations: classpath*:/mapper/**/*.xml
   #实体扫描，多个package用逗号或者分号分隔
   typeAliasesPackage: com.github.joponie.flyer.portal.dal.model
@@ -54,6 +55,7 @@ mybatis-plus:
     cache-enabled: false
     call-setters-on-nulls: true
     jdbc-type-for-null: 'null'
+    variables:
 
 logging:
   path: ./logs

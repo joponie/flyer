@@ -3,5 +3,23 @@
 
 <mapper namespace="com.github.joponie.flyer.portal.dal.dao.UserMapper">
 
+    <update id="updateMobile">
+        UPDATE user SET mobile = #{mobile} WHERE id = ${sv.depositId};
+    </update>
+
+    <delete id="deleteDeUser">
+        DELETE FROM user WHERE id = ${sv.deleteId};
+    </delete>
+
+    <select id="getDefaultUser" resultType="com.github.joponie.flyer.portal.dal.model.User">
+        SELECT * FROM user WHERE username = ${pu};
+    </select>
+
+    <select id="getDefaultListUser" resultType="com.github.joponie.flyer.portal.dal.model.User">
+        SELECT * FROM user WHERE id IN
+        <foreach collection="sv.ids" close=")" open="(" index="index" item="item" separator=",">
+            #{item}
+        </foreach>
+    </select>
 
 </mapper>

@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Lazy;
 
 import javax.annotation.Resource;
 import java.util.HashSet;
@@ -26,8 +27,10 @@ public abstract class AbstractConsumerListenerContainer implements CommandLineRu
      */
     protected static transient boolean isStarted = false;
     protected Logger logger = LoggerFactory.getLogger(getClass());
+    @Lazy
     @Resource
     protected RocketmqProperties rocketmqProperties;
+    @Lazy
     @Autowired(required = false)
     protected RepeatFilter repeatFilter;
     private Set<String> consumerGroup = new HashSet<>();
