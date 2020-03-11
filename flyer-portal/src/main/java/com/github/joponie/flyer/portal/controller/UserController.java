@@ -59,7 +59,7 @@ public class UserController extends BaseController {
     public Response update() {
         return Response.of(userService.updateMobile("123123"));
     }
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "/cache/{id}")
     public Response getCache(@PathVariable Integer id) {
         Long increment = stringRedisTemplate.opsForValue().increment(id.toString());
         log.info("increment:{}", increment);
