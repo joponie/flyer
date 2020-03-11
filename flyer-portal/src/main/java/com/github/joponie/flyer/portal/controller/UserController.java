@@ -7,6 +7,7 @@ import com.github.joponie.flyer.portal.domain.IUserService;
 import com.github.joponie.flyer.rocketmq.MessageBuilder;
 import com.github.joponie.flyer.rocketmq.service.IRocketmqService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -19,6 +20,9 @@ public class UserController extends BaseController {
 
     @Autowired
     private IUserService userService;
+
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
 
     @Autowired
     private IRocketmqService rocketmqService;
@@ -54,5 +58,11 @@ public class UserController extends BaseController {
     @GetMapping("/update")
     public Response update() {
         return Response.of(userService.updateMobile("123123"));
+    }
+    @GetMapping(value = "/{id}")
+    public Response getCache(@PathVariable Integer id) {
+        Long increment = stringRedisTemplate.opsForValue().increment(id.toString());
+        log.info("increment:{}", increment);
+        return Response.of(increment);
     }
 }
