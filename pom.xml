@@ -11,6 +11,7 @@
         <module>flyer-common</module>
         <module>flyer-portal</module>
         <module>flyer-rocketmq</module>
+        <module>flyer-demo</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -4,7 +4,6 @@ import com.github.joponie.flyer.common.base.BaseController;
 import com.github.joponie.flyer.common.base.Response;
 import com.github.joponie.flyer.portal.dal.model.User;
 import com.github.joponie.flyer.portal.domain.IUserService;
-import com.github.joponie.flyer.rocketmq.MessageBuilder;
 import com.github.joponie.flyer.rocketmq.service.IRocketmqService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -35,9 +34,9 @@ public class UserController extends BaseController {
 
     @GetMapping("/{id}")
     public Response get(@PathVariable("id") Integer id) {
-        rocketmqService.send(MessageBuilder.topic("flytest").body(id.toString()).build());
-        log.info("get user, userId:{}", id);
-        return Response.of(id);
+        userService.findById(id);
+        User byId = userService.findById(id);
+        return Response.of(byId);
     }
 
     @GetMapping("/def")
@@ -59,6 +58,7 @@ public class UserController extends BaseController {
     public Response update() {
         return Response.of(userService.updateMobile("123123"));
     }
+
     @GetMapping(value = "/cache/{id}")
     public Response getCache(@PathVariable Integer id) {
         Long increment = stringRedisTemplate.opsForValue().increment(id.toString());
