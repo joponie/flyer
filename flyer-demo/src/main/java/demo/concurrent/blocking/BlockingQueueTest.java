@@ -36,8 +36,6 @@ public class BlockingQueueTest {
                 try {
                     i++;
                     queue.put(i);
-                    String name = getName();
-                    System.out.println(name + " 生产了 " + i);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                     break;
@@ -59,9 +57,7 @@ public class BlockingQueueTest {
         public void run() {
             while (!isInterrupted()) {
                 try {
-                    Integer take = queue.take();
-                    String name = getName();
-                    System.out.println(name + " 消费了 " + take);
+                    queue.take();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                     break;

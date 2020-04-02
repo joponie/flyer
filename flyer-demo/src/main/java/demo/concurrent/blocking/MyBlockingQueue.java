@@ -33,6 +33,8 @@ public class MyBlockingQueue<E> {
                 full.await();
             }
             queue.add(e);
+            String name = Thread.currentThread().getName();
+            System.out.println(name + " 生产了 " + e);
             empty.signal();
         } finally {
             lock.unlock();
@@ -46,6 +48,8 @@ public class MyBlockingQueue<E> {
                 empty.await();
             }
             E e = queue.poll();
+            String name = Thread.currentThread().getName();
+            System.out.println(name + " 消费了 " + e);
             full.signal();
             return e;
         } finally {
