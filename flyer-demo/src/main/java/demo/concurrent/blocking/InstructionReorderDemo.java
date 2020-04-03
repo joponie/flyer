@@ -23,15 +23,15 @@ public class InstructionReorderDemo {
                 a = 1;
                 x = b;
             });
-            t1.start();
-            t1.join();
             Thread t2 = new Thread(() -> {
-                b = 1;
+                b = 2;
                 y = a;
             });
+            t1.start();
             t2.start();
+            t1.join();
             t2.join();
-            if (x == 0 && y == 0) {
+            if (x == y) {
                 System.out.println(count);
                 break;
             }
