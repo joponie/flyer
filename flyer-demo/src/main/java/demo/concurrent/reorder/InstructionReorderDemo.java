@@ -1,4 +1,4 @@
-package demo.concurrent.blocking;
+package demo.concurrent.reorder;
 
 /**
  * @author 刘杰鹏
@@ -6,10 +6,10 @@ package demo.concurrent.blocking;
  */
 public class InstructionReorderDemo {
 
-    static int a;
-    static int b;
-    static int x;
-    static int y;
+    private static int a;
+    private static int b;
+    private static int x;
+    private static int y;
 
     public static void main(String[] args) throws InterruptedException {
         int count = 0;
