@@ -25,4 +25,8 @@ public class User extends UpdatableModel {
      */
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
+
+    public String getHaha() {
+        return "1231";
+    }
 }
