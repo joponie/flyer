@@ -2,10 +2,8 @@ package demo.concurrent.hash;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
-import java.util.Arrays;
-import java.util.List;
-import java.util.SortedMap;
-import java.util.TreeMap;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author 刘杰鹏
@@ -29,9 +27,15 @@ public class ConsistencyHash<T> {
     }
 
     public static void main(String[] args) {
-        ConsistencyHash<String> hash = new ConsistencyHash<>(Arrays.asList("abc", "abc2", "abc3", "abc4", "abc5"));
-        String shardInfo = hash.getShardInfo("1");
-        System.out.println(shardInfo);
+
+
+        Map<String, Integer> map = new ConcurrentHashMap<>();
+        for (int i = 0; i < 100; i++) {
+            map.put(String.valueOf(i), i);
+        }
+//        ConsistencyHash<String> hash = new ConsistencyHash<>(Arrays.asList("abc", "abc2", "abc3", "abc4", "abc5"));
+//        String shardInfo = hash.getShardInfo("1");
+//        System.out.println(shardInfo);
     }
 
     private void init() {
@@ -41,6 +45,7 @@ public class ConsistencyHash<T> {
             for (int n = 0; n < nodeNum; n++)
                 nodes.put(hash("SHARD-" + i + "-NODE-" + n), shardInfo);
         }
+
     }
 
     public T getShardInfo(String key) {
