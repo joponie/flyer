@@ -3,7 +3,7 @@ package com.github.joponie.flyer.clazz;
 import java.lang.reflect.Constructor;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2020-03-06
  */
 public class MiTest {

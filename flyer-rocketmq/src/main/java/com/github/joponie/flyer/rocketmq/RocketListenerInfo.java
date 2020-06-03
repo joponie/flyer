@@ -9,7 +9,7 @@ import org.apache.rocketmq.common.consumer.ConsumeFromWhere;
 import org.apache.rocketmq.common.protocol.heartbeat.MessageModel;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2019-11-28
  */
 @NoArgsConstructor

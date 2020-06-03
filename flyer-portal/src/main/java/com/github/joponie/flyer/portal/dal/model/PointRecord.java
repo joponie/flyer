@@ -3,7 +3,7 @@ package com.github.joponie.flyer.portal.dal.model;
 import lombok.Data;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2020-03-03
  */
 @Data

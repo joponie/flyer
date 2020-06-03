@@ -8,7 +8,7 @@ import javax.annotation.Resource;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2019-11-28
  */
 public class RedisRepeatFilter implements RepeatFilter {

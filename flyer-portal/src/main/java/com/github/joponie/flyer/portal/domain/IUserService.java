@@ -6,7 +6,7 @@ import com.github.joponie.flyer.portal.dal.model.User;
 import java.util.List;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2019-11-04
  */
 public interface IUserService extends IBaseService<User> {

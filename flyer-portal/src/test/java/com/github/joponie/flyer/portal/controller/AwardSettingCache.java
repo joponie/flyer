@@ -7,7 +7,7 @@ import lombok.Setter;
 import java.math.BigDecimal;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2019-11-22
  */
 @Getter

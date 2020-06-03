@@ -1,7 +1,7 @@
 package com.github.joponie.flyer.portal.controller;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2020-02-07
  */
 public class NotifyDeadLockTest {

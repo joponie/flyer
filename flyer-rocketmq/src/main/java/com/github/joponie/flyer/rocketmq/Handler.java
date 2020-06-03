@@ -1,7 +1,7 @@
 package com.github.joponie.flyer.rocketmq;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2019-11-28
  */
 @FunctionalInterface

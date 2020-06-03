@@ -3,7 +3,7 @@ package com.github.joponie.flyer.common.base.account;
 import com.github.joponie.flyer.common.base.ThreadContext;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2019-11-05
  */
 public abstract class BaseAccountService implements IAccountService {

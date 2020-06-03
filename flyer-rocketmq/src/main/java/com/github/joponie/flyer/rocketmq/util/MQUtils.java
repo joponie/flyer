@@ -4,7 +4,7 @@ import com.github.joponie.flyer.rocketmq.RocketmqProperties;
 import com.github.joponie.flyer.rocketmq.constants.MQConstants;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2019-11-28
  */
 public abstract class MQUtils {

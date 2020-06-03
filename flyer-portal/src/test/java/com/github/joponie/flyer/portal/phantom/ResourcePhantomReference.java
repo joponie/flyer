@@ -7,7 +7,7 @@ import java.lang.ref.ReferenceQueue;
 import java.util.List;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2020-02-09
  */
 public class ResourcePhantomReference<T> extends PhantomReference<T> {

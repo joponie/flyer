@@ -1,7 +1,7 @@
 package com.github.joponie.flyer.clazz;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2020-03-06
  */
 public class ClassTest {

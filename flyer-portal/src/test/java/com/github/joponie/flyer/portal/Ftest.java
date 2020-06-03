@@ -1,7 +1,7 @@
 package com.github.joponie.flyer.portal;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2020-03-30
  */
 public class Ftest {

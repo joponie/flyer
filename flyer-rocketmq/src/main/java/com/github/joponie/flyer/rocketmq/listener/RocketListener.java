@@ -7,7 +7,7 @@ import org.apache.rocketmq.common.protocol.heartbeat.MessageModel;
 import java.lang.annotation.*;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2019-11-28
  */
 @Target({ElementType.TYPE, ElementType.METHOD, ElementType.ANNOTATION_TYPE})

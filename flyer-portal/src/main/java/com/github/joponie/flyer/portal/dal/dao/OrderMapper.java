@@ -5,7 +5,7 @@ import com.github.joponie.flyer.portal.dal.model.Order;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2020-03-03
  */
 @Mapper

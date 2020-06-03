@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2019-11-04
  */
 public abstract class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseModel> implements IBaseService<T> {

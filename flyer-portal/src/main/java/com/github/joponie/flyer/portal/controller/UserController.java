@@ -10,7 +10,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2019-11-04
  */
 @RestController

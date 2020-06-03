@@ -9,7 +9,7 @@ import java.util.TreeMap;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2020-03-26
  */
 public class StringTest {

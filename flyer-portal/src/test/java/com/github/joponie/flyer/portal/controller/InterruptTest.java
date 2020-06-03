@@ -3,7 +3,7 @@ package com.github.joponie.flyer.portal.controller;
 import org.junit.Test;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2020-01-17
  */
 public class InterruptTest {

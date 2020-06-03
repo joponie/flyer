@@ -1,7 +1,7 @@
 package com.github.joponie.flyer.common.constant;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2019-11-04
  */
 public class DateConstants {

@@ -10,7 +10,7 @@ import java.util.Optional;
 /**
  * The type Adapter message.
  *
- * @author 刘杰鹏
+ * @author kain
  * @since 2019-11-28
  */
 @AllArgsConstructor

@@ -3,7 +3,7 @@ package com.github.joponie.flyer.portal.phantom;
 import java.util.WeakHashMap;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2020-02-09
  */
 public class WeakTest {

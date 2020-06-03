@@ -6,7 +6,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2020-04-02
  */
 public class MyBlockingQueue<E> {

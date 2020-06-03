@@ -6,7 +6,7 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2020-04-08
  */
 public class ConsistencyHash<T> {

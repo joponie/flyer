@@ -3,7 +3,7 @@ package com.github.joponie.flyer.common.base;
 import java.util.List;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2019-11-04
  */
 public interface IBaseService<T> {

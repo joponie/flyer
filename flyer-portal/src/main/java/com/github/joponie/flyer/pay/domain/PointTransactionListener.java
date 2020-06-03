@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2020-03-03
  */
 @Component

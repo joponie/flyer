@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2020-02-09
  */
 public class ResourceCloseDeamon extends Thread {

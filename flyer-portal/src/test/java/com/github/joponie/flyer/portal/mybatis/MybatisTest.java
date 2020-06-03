@@ -4,7 +4,7 @@ import org.apache.ibatis.jdbc.SQL;
 import org.junit.Test;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2020-03-12
  */
 public class MybatisTest {

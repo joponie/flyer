@@ -1,7 +1,7 @@
 package demo.concurrent.blocking;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2020-04-02
  */
 public class BlockingQueueTest {

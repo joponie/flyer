@@ -6,7 +6,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2020-04-04
  */
 public class HeadAndLockDemo {

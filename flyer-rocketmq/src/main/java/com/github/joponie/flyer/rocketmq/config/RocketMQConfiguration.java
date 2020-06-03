@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.util.StringUtils;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2019-11-28
  */
 @Getter

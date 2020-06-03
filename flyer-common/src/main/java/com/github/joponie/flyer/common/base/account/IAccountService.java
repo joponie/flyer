@@ -1,7 +1,7 @@
 package com.github.joponie.flyer.common.base.account;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2019-11-05
  */
 public interface IAccountService {

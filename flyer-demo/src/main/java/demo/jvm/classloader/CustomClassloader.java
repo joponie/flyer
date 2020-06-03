@@ -1,7 +1,7 @@
 package demo.jvm.classloader;
 
 /**
- * @author 刘杰鹏
+ * @author kain
  * @since 2020-04-09
  */
 public class CustomClassloader extends ClassLoader{
