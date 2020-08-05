@@ -1,1 +1,1 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.github.joponie.flyer.rocketmq.config.RocketMQConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=jie.flyer.rocketmq.config.RocketMQConfiguration
