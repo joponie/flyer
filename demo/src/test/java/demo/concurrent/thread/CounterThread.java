@@ -3,7 +3,7 @@ package demo.concurrent.thread;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @Author 刘杰鹏
+ * @Author kain
  * @Date 2020/8/31
  **/
 public class CounterThread extends Thread{

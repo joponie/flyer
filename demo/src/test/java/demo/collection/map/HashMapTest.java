@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
- * @Author 刘杰鹏
+ * @Author kain
  * @Date 2020/8/31
  **/
 public class HashMapTest {

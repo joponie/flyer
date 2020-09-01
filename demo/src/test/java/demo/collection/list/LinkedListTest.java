@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * @Author 刘杰鹏
+ * @Author kain
  * @Date 2020/8/31
  **/
 public class LinkedListTest {

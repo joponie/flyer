@@ -13,7 +13,7 @@ import javax.crypto.Cipher;
 import org.apache.commons.codec.binary.Base64;
 
 /**
- * @Author 刘杰鹏
+ * @Author kain
  * @Date 2020/8/25
  **/
 public class TestRSA {

@@ -3,7 +3,7 @@ package jie.flyer.demo.ext;
 import lombok.Data;
 
 /**
- * @Author 刘杰鹏
+ * @Author kain
  * @Date 2020/8/5
  **/
 public class Base {

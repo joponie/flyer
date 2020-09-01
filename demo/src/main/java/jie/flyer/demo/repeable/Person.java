@@ -3,7 +3,7 @@ package jie.flyer.demo.repeable;
 import java.lang.annotation.*;
 
 /**
- * @Author 刘杰鹏
+ * @Author kain
  * @Date 2020/8/25
  **/
 @Repeatable(value = Persons.class)
