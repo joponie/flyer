@@ -13,17 +13,19 @@ import java.io.Serializable;
  */
 @NoArgsConstructor
 @Data
-public class Response<T> implements Serializable {
+public class Response implements Serializable {
 
     private static final long serialVersionUID = 1L;
     private static final String SUCCESS = "200";
     private static final String FAIL = "500";
 
     private String message = "success";
-    private String code = SUCCESS;
-    private T data;
 
-    public Response(T data, String message) {
+    private String code = SUCCESS;
+
+    private Object data;
+
+    public Response(Object data, String message) {
         super();
         this.data = data;
         this.message = message;
@@ -35,8 +37,8 @@ public class Response<T> implements Serializable {
         this.code = FAIL;
     }
 
-    public static Response<Boolean> rest(boolean result) {
-        Response<Boolean> r = new Response<>();
+    public static Response rest(boolean result) {
+        Response r = new Response();
         if (!result) {
             r.setCode(Response.FAIL);
             r.setData(false);
@@ -44,30 +46,30 @@ public class Response<T> implements Serializable {
         return r;
     }
 
-    public static Response<Boolean> ok() {
-        Response<Boolean> r = new Response<>();
+    public static Response ok() {
+        Response r = new Response();
         r.setCode(Response.SUCCESS);
         r.setData(true);
         return r;
     }
 
-    public static <T> Response<T> of(T t) {
-        Response<T> r = new Response<>();
+    public static <T> Response of(T t) {
+        Response r = new Response();
         r.setCode(Response.SUCCESS);
         r.setData(t);
         return r;
     }
 
-    public static Response<Boolean> ofEx(FlyerException e) {
+    public static Response ofEx(FlyerException e) {
         return ofEx(e.getCode(), e.getMessage());
     }
 
-    public static Response<Boolean> ofEx(IExceptionEnums e) {
+    public static Response ofEx(IExceptionEnums e) {
         return ofEx(e.getCode(), e.getMessage());
     }
 
-    public static Response<Boolean> ofEx(String code, String message) {
-        Response<Boolean> response = new Response<>();
+    public static Response ofEx(String code, String message) {
+        Response response = new Response();
         response.setData(Boolean.FALSE);
         response.setCode(code);
         response.setMessage(message);
