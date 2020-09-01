@@ -10,7 +10,7 @@ import java.util.Date;
  */
 public abstract class UpdatableServiceImpl<M extends BaseMapper<T>, T extends UpdatableModel> extends BaseServiceImpl<M, T> {
 
-    @Autowired
+    @Autowired(required = false)
     protected M mapper;
 
     @Override

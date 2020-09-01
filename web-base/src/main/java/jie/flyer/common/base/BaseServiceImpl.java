@@ -14,7 +14,7 @@ public abstract class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseMod
 
     protected final Logger log = LoggerFactory.getLogger(getClass());
 
-    @Autowired
+    @Autowired(required = false)
     protected M mapper;
 
     @Override

@@ -23,7 +23,7 @@ public class UserController extends BaseController {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
 
-    @Autowired
+    @Autowired(required = false)
     private IRocketmqService rocketmqService;
 
     @PostMapping
