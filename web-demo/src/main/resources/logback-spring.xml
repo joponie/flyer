@@ -14,7 +14,7 @@
     </appender>
 
     <appender name="LogFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${logPath}/flyer-portal.log</File>
+        <File>${logPath}/flyer-web-demo.log</File>
         <Append>true</Append>
         <encoder>
             <pattern>[%d] [%p] [%t] [%F:%L] - %m%n</pattern>
@@ -23,7 +23,7 @@
             <level>DEBUG</level>
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>${logPath}/flyer-portal.log.%d{yyyy-MM-dd}.%i</fileNamePattern>
+            <fileNamePattern>${logPath}/flyer-web-demo.log.%d{yyyy-MM-dd}.%i</fileNamePattern>
             <!-- 单个日志文件最大500MB -->
             <maxFileSize>500MB</maxFileSize>
         </rollingPolicy>
@@ -38,7 +38,7 @@
             <level>ERROR</level>
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${logPath}/flyer-portal-error.log.%d{yyyy-MM-dd}</fileNamePattern>
+            <fileNamePattern>${logPath}/flyer-web-demo-error.log.%d{yyyy-MM-dd}</fileNamePattern>
         </rollingPolicy>
     </appender>
 
