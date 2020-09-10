@@ -5,7 +5,7 @@ spring:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://localhost:3306/flyer?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
       username: root
-      password: root
+      password: vanke-mysql-100
       initial-size: 10
       max-active: 100
       min-idle: 10
@@ -32,7 +32,7 @@ spring:
             multi-statement-allow: true
 
 rocketmq:
-  enabled: true
+  enabled: false
   producer-group: flyer
   profiles: dev
   namesrv-addr: 192.168.235.22:9876
