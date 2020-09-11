@@ -29,40 +29,40 @@ public class UserController extends BaseController {
     @PostMapping
     public Response add(@RequestBody User user) {
         log.info("add");
-        return Response.of(userService.addUser(user));
+        return Response.ok(userService.addUser(user));
     }
 
     @GetMapping("/{id}")
     public Response get(@PathVariable("id") Integer id) {
         userService.findById(id);
         User byId = userService.findById(id);
-        return Response.of(byId);
+        return Response.ok(byId);
     }
 
     @GetMapping("/def")
     public Response getDef() {
-        return Response.of(userService.getDef());
+        return Response.ok(userService.getDef());
     }
 
     @GetMapping("/deflist")
     public Response deflist() {
-        return Response.of(userService.getDefList());
+        return Response.ok(userService.getDefList());
     }
 
     @GetMapping("/delete")
     public Response delete() {
-        return Response.of(userService.deleteDeUser());
+        return Response.ok(userService.deleteDeUser());
     }
 
     @GetMapping("/update")
     public Response update() {
-        return Response.of(userService.updateMobile("123123"));
+        return Response.ok(userService.updateMobile("123123"));
     }
 
     @GetMapping(value = "/cache/{id}")
     public Response getCache(@PathVariable Integer id) {
         Long increment = stringRedisTemplate.opsForValue().increment(id.toString());
         log.info("increment:{}", increment);
-        return Response.of(increment);
+        return Response.ok(increment);
     }
 }

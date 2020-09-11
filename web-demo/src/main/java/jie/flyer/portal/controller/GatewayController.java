@@ -25,6 +25,6 @@ public class GatewayController extends BaseController {
         String substring = lookupPath.substring(GATE_URI.length() + service.length() + 1);
 
         RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
-        return Response.of(substring);
+        return Response.ok(substring);
     }
 }

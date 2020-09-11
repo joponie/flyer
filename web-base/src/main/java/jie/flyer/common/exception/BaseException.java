@@ -7,14 +7,14 @@ import lombok.Data;
  * @since 2019-11-05
  */
 @Data
-public class FlyerException extends RuntimeException {
+public class BaseException extends RuntimeException {
 
     private String code;
 
     private String message;
 
-    public FlyerException(String code, String message) {
-        super(code + message);
+    public BaseException(String code, String message) {
+        super(String.format("code:[%s] message:[%s]", code, message));
         this.code = code;
         this.message = message;
     }

@@ -15,7 +15,7 @@ public interface IExceptionEnums {
      */
     String getMessage();
 
-    default FlyerException getException() {
-        return new FlyerException(getCode(), getMessage());
+    default BaseException getException() {
+        return new BaseException(getCode(), getMessage());
     }
 }

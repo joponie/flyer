@@ -1,6 +1,6 @@
 package jie.flyer.common.base;
 
-import jie.flyer.common.exception.FlyerException;
+import jie.flyer.common.exception.BaseException;
 import jie.flyer.common.exception.IExceptionEnums;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -53,14 +53,14 @@ public class Response implements Serializable {
         return r;
     }
 
-    public static <T> Response of(T t) {
+    public static <T> Response ok(T t) {
         Response r = new Response();
         r.setCode(Response.SUCCESS);
         r.setData(t);
         return r;
     }
 
-    public static Response ofEx(FlyerException e) {
+    public static Response ofEx(BaseException e) {
         return ofEx(e.getCode(), e.getMessage());
     }
 

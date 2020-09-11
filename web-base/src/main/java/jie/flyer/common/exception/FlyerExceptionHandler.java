@@ -29,7 +29,7 @@ public class FlyerExceptionHandler {
     @ResponseBody
     public Response handleMissingServletRequestParameterException(MissingServletRequestParameterException e) {
         log.error("缺少请求参数", e);
-        return Response.ofEx(FlyerCommonExCodeEnum.INVALID_REQUEST_FORMAT);
+        return Response.ofEx(BaseExCodeEnum.INVALID_REQUEST_FORMAT);
     }
 
     @ExceptionHandler(Exception.class)
@@ -37,13 +37,13 @@ public class FlyerExceptionHandler {
     @ResponseBody
     public Response systemException(Exception e) {
         log.error("系统错误", e);
-        return Response.ofEx(FlyerCommonExCodeEnum.SYS_TOO_BUSY);
+        return Response.ofEx(BaseExCodeEnum.SYS_TOO_BUSY);
     }
 
-    @ExceptionHandler(FlyerException.class)
+    @ExceptionHandler(BaseException.class)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
-    public Response flyerException(FlyerException e) {
+    public Response flyerException(BaseException e) {
         return Response.ofEx(e);
     }
 

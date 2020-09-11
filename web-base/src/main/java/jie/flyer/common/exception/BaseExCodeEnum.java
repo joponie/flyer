@@ -7,7 +7,7 @@ import lombok.AllArgsConstructor;
  * @since 2019-11-05
  */
 @AllArgsConstructor
-public enum FlyerCommonExCodeEnum implements IExceptionEnums {
+public enum BaseExCodeEnum implements IExceptionEnums {
 
     INVALID_REQUEST_FORMAT("1005", "请求格式错误"),
     SYS_TOO_BUSY("1006", "系统太忙啦，请稍后");
