@@ -19,6 +19,12 @@ public class BaseException extends RuntimeException {
         this.message = message;
     }
 
+    public BaseException(IExCodeEnum codeEnum) {
+        super(String.format("code:[%s] message:[%s]", codeEnum.getCode(), codeEnum.getMessage()));
+        this.code = codeEnum.getCode();
+        this.message = codeEnum.getMessage();
+    }
+
     @Override
     public String getMessage() {
         return String.format("flyer exception error code %s, error message %s", code, message);
