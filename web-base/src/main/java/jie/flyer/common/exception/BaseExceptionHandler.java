@@ -21,7 +21,7 @@ import javax.validation.ConstraintViolationException;
 @Slf4j
 @ControllerAdvice
 @RequiredArgsConstructor
-public class FlyerExceptionHandler {
+public class BaseExceptionHandler {
 
     @ResponseStatus(HttpStatus.OK)
     @ExceptionHandler({MissingServletRequestParameterException.class, HttpMessageNotReadableException.class
