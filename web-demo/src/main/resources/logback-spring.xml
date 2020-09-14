@@ -30,7 +30,7 @@
     </appender>
 
     <appender name="ErrorFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${logPath}/flyer-portal-error.log</File>
+        <File>${logPath}/flyer-web-demo-error.log</File>
         <encoder>
             <pattern>[%d] [%p] [%t] [%F:%L] - %m%n</pattern>
         </encoder>
