@@ -21,6 +21,8 @@
         <module>database</module>
         <module>demo</module>
         <module>web-demo</module>
+        <module>redis</module>
+        <module>dubbo</module>
     </modules>
 
     <properties>
