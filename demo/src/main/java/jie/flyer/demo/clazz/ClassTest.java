@@ -1,4 +1,4 @@
-package jie.flyer.clazz;
+package jie.flyer.demo.clazz;
 
 /**
  * @author kain

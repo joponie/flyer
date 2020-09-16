@@ -11,8 +11,8 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum BaseExCodeEnum implements IExCodeEnum {
 
-    INVALID_REQUEST_FORMAT("1005", "请求格式错误"),
-    SYS_TOO_BUSY("1006", "系统太忙啦，请稍后");
+    SYS_TOO_BUSY("1001", "系统太忙啦，请稍后"),
+    INVALID_REQUEST_FORMAT("1001", "请求格式错误");
 
     private final String code;
     private final String message;
