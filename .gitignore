@@ -4,4 +4,4 @@
 */target/
 **/target/*
 *rebel.xml*
-logs/
+**/logs/

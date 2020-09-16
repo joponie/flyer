@@ -58,9 +58,9 @@ mybatis-plus:
     variables:
 
 logging:
-  path: ./logs
+  path: ./web-demo/logs
   level:
-    root: info
+    root: debug
   config: classpath:logback-spring.xml
 
 

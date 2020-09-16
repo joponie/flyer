@@ -16,13 +16,14 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>web-base</module>
-        <module>rocketmq</module>
-        <module>database</module>
-        <module>demo</module>
-        <module>web-demo</module>
         <module>redis</module>
         <module>dubbo</module>
+        <module>database</module>
+        <module>rocketmq</module>
+        <module>web-base</module>
+
+        <module>demo</module>
+        <module>web-demo</module>
     </modules>
 
     <properties>
@@ -52,7 +53,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
