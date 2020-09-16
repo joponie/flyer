@@ -15,7 +15,7 @@ public interface IExCodeEnum {
      */
     String getMessage();
 
-    default BaseException getException() {
-        return new BaseException(getCode(), getMessage());
+    default BizException getException() {
+        return new BizException(getCode(), getMessage());
     }
 }

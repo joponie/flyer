@@ -40,10 +40,10 @@ public class BaseExceptionHandler {
         return Response.ofEx(BaseExCodeEnum.SYS_TOO_BUSY);
     }
 
-    @ExceptionHandler(BaseException.class)
+    @ExceptionHandler(BizException.class)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
-    public Response flyerException(BaseException e) {
+    public Response flyerException(BizException e) {
         return Response.ofEx(e);
     }
 

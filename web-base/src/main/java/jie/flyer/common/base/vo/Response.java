@@ -1,6 +1,6 @@
 package jie.flyer.common.base.vo;
 
-import jie.flyer.common.exception.BaseException;
+import jie.flyer.common.exception.BizException;
 import jie.flyer.common.exception.IExCodeEnum;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -62,7 +62,7 @@ public class Response implements Serializable {
         return r;
     }
 
-    public static Response ofEx(BaseException e) {
+    public static Response ofEx(BizException e) {
         return ofEx(e.getCode(), e.getMessage());
     }
 

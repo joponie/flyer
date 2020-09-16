@@ -7,19 +7,19 @@ import lombok.Data;
  * @since 2019-11-05
  */
 @Data
-public class BaseException extends RuntimeException {
+public class BizException extends RuntimeException {
 
     private String code;
 
     private String message;
 
-    public BaseException(String code, String message) {
+    public BizException(String code, String message) {
         super(String.format("code:[%s] message:[%s]", code, message));
         this.code = code;
         this.message = message;
     }
 
-    public BaseException(IExCodeEnum codeEnum) {
+    public BizException(IExCodeEnum codeEnum) {
         super(String.format("code:[%s] message:[%s]", codeEnum.getCode(), codeEnum.getMessage()));
         this.code = codeEnum.getCode();
         this.message = codeEnum.getMessage();
