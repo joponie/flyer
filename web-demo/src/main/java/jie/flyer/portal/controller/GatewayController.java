@@ -1,7 +1,7 @@
 package jie.flyer.portal.controller;
 
 import jie.flyer.common.base.BaseController;
-import jie.flyer.common.base.Response;
+import jie.flyer.common.base.vo.Response;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;

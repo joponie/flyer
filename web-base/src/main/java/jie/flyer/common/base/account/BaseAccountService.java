@@ -1,7 +1,5 @@
 package jie.flyer.common.base.account;
 
-import jie.flyer.common.base.ThreadContext;
-
 /**
  * @author kain
  * @since 2019-11-05

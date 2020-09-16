@@ -1,8 +1,9 @@
 package jie.flyer.portal.domain.impl;
 
-import jie.flyer.common.base.UpdatableServiceImpl;
+import jie.flyer.common.base.ServiceImpl;
 import jie.flyer.portal.dal.dao.UserMapper;
 import jie.flyer.portal.dal.model.User;
+import jie.flyer.portal.dal.repository.IUserRepository;
 import jie.flyer.portal.domain.IUserService;
 import org.springframework.stereotype.Service;
 
@@ -13,30 +14,11 @@ import java.util.List;
  * @since 2019-11-04
  */
 @Service
-public class UserServiceImpl extends UpdatableServiceImpl<UserMapper, User> implements IUserService {
+public class UserServiceImpl extends ServiceImpl<IUserRepository> implements IUserService {
     @Override
     public Integer addUser(User user) {
         log.info("add user");
-        return add(user);
+        return repository.add(user);
     }
 
-    @Override
-    public User getDef() {
-        return mapper.getDefaultUser();
-    }
-
-    @Override
-    public List<User> getDefList() {
-        return mapper.getDefaultListUser();
-    }
-
-    @Override
-    public Integer updateMobile(String mobile) {
-        return mapper.updateMobile(mobile);
-    }
-
-    @Override
-    public Integer deleteDeUser() {
-        return mapper.deleteDeUser();
-    }
 }

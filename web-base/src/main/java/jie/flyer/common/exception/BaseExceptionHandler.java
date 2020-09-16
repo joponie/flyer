@@ -1,6 +1,6 @@
 package jie.flyer.common.exception;
 
-import jie.flyer.common.base.Response;
+import jie.flyer.common.base.vo.Response;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

@@ -1,6 +1,5 @@
-package jie.flyer.common.base;
+package jie.flyer.common.base.account;
 
-import jie.flyer.common.base.account.Account;
 import lombok.NoArgsConstructor;
 
 import java.util.Collections;

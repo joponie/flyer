@@ -1,4 +1,4 @@
-package jie.flyer.common.base;
+package jie.flyer.common.base.vo;
 
 import jie.flyer.common.exception.BaseException;
 import jie.flyer.common.exception.IExCodeEnum;
@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 
 /**
+ * response
+ *
  * @author kain
  * @since 2019-11-04
  */
