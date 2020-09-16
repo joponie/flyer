@@ -11,9 +11,10 @@
     </parent>
 
     <artifactId>web-base</artifactId>
+    <packaging>jar</packaging>
 
     <properties>
-        <mybatisplus.version>3.1.2</mybatisplus.version>
+        <mybatisplus.version>3.3.0</mybatisplus.version>
         <druid.version>1.1.13</druid.version>
     </properties>
 
@@ -56,6 +57,11 @@
                     <artifactId>mybatis-plus-generator</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-extension</artifactId>
+            <version>${mybatisplus.version}</version>
         </dependency>
 
         <dependency>
