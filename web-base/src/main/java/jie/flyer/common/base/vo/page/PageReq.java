@@ -1,4 +1,4 @@
-package jie.flyer.common.base.vo;
+package jie.flyer.common.base.vo.page;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 /**
  * @Author kain
@@ -13,7 +14,7 @@ import javax.validation.constraints.NotNull;
  **/
 @NoArgsConstructor
 @Data
-public class PageReq {
+public class PageReq implements Serializable {
 
     @Max(value = 500, message = "分页不能大于500页")
     @Min(value = 1, message = "分页不能小于1页")

@@ -2,10 +2,14 @@ package jie.flyer.portal.controller;
 
 import jie.flyer.common.base.BaseController;
 import jie.flyer.common.base.vo.Response;
+import jie.flyer.common.base.vo.page.PageVO;
 import jie.flyer.portal.dal.model.User;
 import jie.flyer.portal.domain.IUserService;
+import jie.flyer.portal.vo.req.UserPageReq;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 /**
  * @author kain
@@ -21,6 +25,12 @@ public class UserController extends BaseController {
     @GetMapping(value = "/{id}")
     public Response get(@PathVariable Integer id) {
         User user = userService.getUser(id);
+        return Response.ok(user);
+    }
+
+    @GetMapping(value = "page")
+    public Response get(@Valid @RequestBody UserPageReq req) {
+        PageVO<User> user = userService.page(req);
         return Response.ok(user);
     }
 

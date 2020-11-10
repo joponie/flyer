@@ -1,8 +1,10 @@
 package jie.flyer.portal.domain;
 
 import jie.flyer.common.base.IService;
+import jie.flyer.common.base.vo.page.PageVO;
 import jie.flyer.portal.dal.model.User;
 import jie.flyer.portal.dal.repository.IUserRepository;
+import jie.flyer.portal.vo.req.UserPageReq;
 
 import java.util.List;
 
@@ -12,6 +14,10 @@ import java.util.List;
  */
 public interface IUserService extends IService<IUserRepository> {
 
+    User getUser(Integer id);
+
+    PageVO<User> page(UserPageReq req);
+
     Integer addUser(User user);
 
     void deleteUser(Integer id);
@@ -19,6 +25,4 @@ public interface IUserService extends IService<IUserRepository> {
     void updateUser(Integer id, User user);
 
     void enable(Integer id);
-
-    User getUser(Integer id);
 }
