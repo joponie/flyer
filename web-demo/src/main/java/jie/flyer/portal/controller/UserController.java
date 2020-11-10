@@ -5,7 +5,6 @@ import jie.flyer.common.base.vo.Response;
 import jie.flyer.portal.dal.model.User;
 import jie.flyer.portal.domain.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -19,19 +18,26 @@ public class UserController extends BaseController {
     @Autowired
     private IUserService userService;
 
-    @Autowired
-    private StringRedisTemplate stringRedisTemplate;
+    @GetMapping(value = "/{id}")
+    public Response get(@PathVariable Integer id) {
+        User user = userService.getUser(id);
+        return Response.ok(user);
+    }
 
     @PostMapping
     public Response add(@RequestBody User user) {
-        log.info("add");
         return Response.ok(userService.addUser(user));
     }
 
-    @GetMapping(value = "/cache/{id}")
-    public Response getCache(@PathVariable Integer id) {
-        Long increment = stringRedisTemplate.opsForValue().increment(id.toString());
-        log.info("increment:{}", increment);
-        return Response.ok(increment);
+    @DeleteMapping(value = "/{id}")
+    public Response delete(@PathVariable Integer id) {
+        userService.deleteUser(id);
+        return Response.ok();
+    }
+
+    @PutMapping(value = "/{id}")
+    public Response update(@PathVariable Integer id, @RequestBody User user) {
+        userService.updateUser(id, user);
+        return Response.ok();
     }
 }

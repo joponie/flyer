@@ -6,6 +6,9 @@
     <update id="updateMobile">
         UPDATE user SET mobile = #{mobile} WHERE id = ${sv.depositId};
     </update>
+    <update id="enable">
+        UPDATE user SET mobile = #{sv.username} WHERE id = #{aid};
+    </update>
 
     <delete id="deleteDeUser">
         DELETE FROM user WHERE id = ${sv.deleteId};

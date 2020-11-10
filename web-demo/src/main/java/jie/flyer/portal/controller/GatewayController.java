@@ -2,6 +2,8 @@ package jie.flyer.portal.controller;
 
 import jie.flyer.common.base.BaseController;
 import jie.flyer.common.base.vo.Response;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -15,6 +17,9 @@ public class GatewayController extends BaseController {
 
     public static final String GATE_URI = "/gate";
 
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
+
     private UrlPathHelper urlPathHelper = new UrlPathHelper();
 
     @GetMapping(value = "/{service}/**")
@@ -26,5 +31,12 @@ public class GatewayController extends BaseController {
 
         RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
         return Response.ok(substring);
+    }
+
+    @GetMapping(value = "/cache/{id}")
+    public Response getCache(@PathVariable Integer id) {
+        Long increment = stringRedisTemplate.opsForValue().increment(id.toString());
+        log.info("increment:{}", increment);
+        return Response.ok(increment);
     }
 }

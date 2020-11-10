@@ -33,7 +33,6 @@ spring:
 
 #mybatis
 mybatis-plus:
-  configuration-properties: pu:'mingbai123'
   mapper-locations: classpath*:/mapper/**/*.xml
   #实体扫描，多个package用逗号或者分号分隔
   typeAliasesPackage: com.github.joponie.flyer.portal.dal.model
@@ -60,7 +59,7 @@ mybatis-plus:
 logging:
   path: ./web-demo/logs
   level:
-    root: debug
+    root: info
   config: classpath:logback-spring.xml
 
 

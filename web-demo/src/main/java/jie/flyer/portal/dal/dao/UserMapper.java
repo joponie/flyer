@@ -22,4 +22,5 @@ public interface UserMapper extends IMapper<User> {
 
     Integer deleteDeUser();
 
+    void enable( Integer id);
 }

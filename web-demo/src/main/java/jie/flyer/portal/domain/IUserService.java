@@ -13,4 +13,12 @@ import java.util.List;
 public interface IUserService extends IService<IUserRepository> {
 
     Integer addUser(User user);
+
+    void deleteUser(Integer id);
+
+    void updateUser(Integer id, User user);
+
+    void enable(Integer id);
+
+    User getUser(Integer id);
 }

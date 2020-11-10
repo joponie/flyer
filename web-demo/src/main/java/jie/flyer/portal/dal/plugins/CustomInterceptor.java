@@ -1,6 +1,7 @@
 package jie.flyer.portal.dal.plugins;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.binding.MapperMethod;
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.mapping.SqlSource;
@@ -32,6 +33,12 @@ public class CustomInterceptor implements Interceptor {
     public Object intercept(Invocation invocation) throws Throwable {
         Object[] args = invocation.getArgs();
         MappedStatement mappedStatement = (MappedStatement) args[0];
+
+        Object parameter = invocation.getArgs().length > 1 ? invocation.getArgs()[1] : null;
+        if (parameter instanceof MapperMethod.ParamMap) {
+            MapperMethod.ParamMap<Object> map = (MapperMethod.ParamMap<Object>) args[1];
+            map.put(SUBJECT, subjectMap);
+        }
         SqlSource sqlSource = mappedStatement.getSqlSource();
         // 只拦截动态sql
         if (sqlSource instanceof DynamicSqlSource) {
