@@ -23,4 +23,10 @@ public class PageVO<T> implements Serializable {
     private Long total;
 
     private List<T> list;
+
+    public PageVO(Long pageNum, Long pageSize, Long total) {
+        this.pageNum = pageNum;
+        this.pageSize = pageSize;
+        this.total = total;
+    }
 }
