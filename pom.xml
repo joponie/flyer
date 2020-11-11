@@ -16,14 +16,13 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>redis</module>
-        <module>dubbo</module>
-        <module>database</module>
-        <module>rocketmq</module>
-        <module>web-base</module>
-
         <module>demo</module>
         <module>web-demo</module>
+
+        <module>rocketmq</module>
+        <module>flyer-web</module>
+        <module>flyer-components</module>
+        <module>flyer-spring-boot-starter</module>
     </modules>
 
     <properties>

@@ -10,7 +10,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>web-base</artifactId>
+    <artifactId>flyer-web</artifactId>
     <packaging>jar</packaging>
 
     <properties>
