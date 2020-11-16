@@ -1,7 +1,6 @@
 package jie.flyer.common.base;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
@@ -28,6 +27,7 @@ public abstract class BaseModel implements Serializable {
      * 创建时间
      */
     @JsonIgnore
+    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
     /**
      * 更新人ID
@@ -38,10 +38,12 @@ public abstract class BaseModel implements Serializable {
      * 更新时间
      */
     @JsonIgnore
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
     /**
      * 删除标记
      */
+    @TableLogic(value = "0", delval = "1")
     @JsonIgnore
     private Integer delFlg;
 
