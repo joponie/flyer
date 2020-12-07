@@ -23,7 +23,7 @@ public class ExternalSort {
         File inputFile = new File(INPUT_FILE);
         File outputFile = new File(OUT_FILE);
         File tempDir = new File(TEMP_DIR);
-        generateData(inputFile);
+//        generateData(inputFile);
         long start = System.currentTimeMillis();
         sort(inputFile, outputFile, tempDir);
         System.out.println(System.currentTimeMillis() - start);
