@@ -12,6 +12,8 @@ public class Demo {
         HandlerProxyFactory<UserHandler> proxyFactory = new HandlerProxyFactory<>(UserHandler.class);
         UserHandler userHandler = proxyFactory.newInstance();
         userHandler.sayHello();
+
+        System.out.println(userHandler.toString());
     }
 
 }

@@ -1,14 +1,11 @@
 package jie.flyer.demo.conf;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.MethodType;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @Author kain
